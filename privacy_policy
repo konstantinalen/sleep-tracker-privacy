@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Sleep Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; max-width: 800px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        p { margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Policy for Sleep Tracker</h1>
+    <p><strong>Last updated:</strong> February 2026</p>
+
+    <p>This Privacy Policy applies to the <strong>Sleep Tracker</strong> mobile application (hereby referred to as "the App") developed as a Free app. This service is provided at no cost and is intended for use as is.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>For a better experience, while using our App, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+    
+    <ul>
+        <li><strong>Account Information:</strong> We use Firebase Authentication. When you create an account, we collect your email address and password to securely log you in.</li>
+        <li><strong>Health & Sleep Data:</strong> The App collects temperature and humidity data via a connected Bluetooth device, as well as your manual input regarding sleep quality. This data is stored securely in Firebase Firestore.</li>
+    </ul>
+
+    <h2>2. Why We Need Bluetooth and Location Permissions</h2>
+    <p>The App requires <strong>Bluetooth</strong> permissions to connect to your external thermometer device to track room conditions during your sleep.</p>
+    <p>On Android devices, scanning for Bluetooth devices inherently requires <strong>Location Permission</strong> (specifically <em>ACCESS_FINE_LOCATION</em> or <em>ACCESS_COARSE_LOCATION</em>). <strong>We do NOT track, collect, or store your physical location or GPS data.</strong> The location permission is strictly used to allow the Bluetooth scanning functionality to work properly.</p>
+
+    <h2>3. Background Services & Alarms</h2>
+    <p>The App uses background services and exact alarms (<em>SCHEDULE_EXACT_ALARM</em>) to periodically wake up the app during the night. This is necessary to automatically scan and record temperature data without requiring you to keep the app open.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>The App does use third-party services that may collect information used to identify you. We use the following Google services:</p>
+    <ul>
+        <li><strong>Google Play Services:</strong> For Android platform requirements.</li>
+        <li><strong>Firebase (Authentication & Firestore):</strong> To securely store your account details and sleep data.</li>
+    </ul>
+    <p>These services adhere to their own strict privacy policies and security standards.</p>
+
+    <h2>5. Security</h2>
+    <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. All data sent to our database (Firebase) is encrypted in transit.</p>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+
+</body>
+</html>
