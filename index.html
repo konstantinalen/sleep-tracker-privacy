@@ -6,42 +6,51 @@
     <title>Privacy Policy - Sleep Tracker</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; max-width: 800px; margin: auto; }
-        h1, h2 { color: #2c3e50; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px; }
         p { margin-bottom: 15px; }
+        ul { margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
     <h1>Privacy Policy for Sleep Tracker</h1>
-    <p><strong>Last updated:</strong> February 2026</p>
+    <p><strong>Last updated:</strong> June 2026</p>
 
     <p>This Privacy Policy applies to the <strong>Sleep Tracker</strong> mobile application (hereby referred to as "the App") developed as a Free app. This service is provided at no cost and is intended for use as is.</p>
 
     <h2>1. Information We Collect</h2>
-    <p>For a better experience, while using our App, we may require you to provide us with certain personally identifiable information. The information that we request will be retained by us and used as described in this privacy policy.</p>
+    <p>To provide you with personalized sleep analysis and insights, the App collects and processes the following types of data:</p>
     
     <ul>
-        <li><strong>Account Information:</strong> We use Firebase Authentication. When you create an account, we collect your email address and password to securely log you in.</li>
-        <li><strong>Health & Sleep Data:</strong> The App collects temperature and humidity data via a connected Bluetooth device, as well as your manual input regarding sleep quality. This data is stored securely in Firebase Firestore.</li>
+        <li><strong>Account Information:</strong> We use Firebase Authentication and Google Sign-In. When you create an account, we collect your email address and basic profile information to securely log you in and sync your data.</li>
+        <li><strong>Health & Biometric Data:</strong> With your explicit permission, the App reads sleep sessions, sleep stages, and heart rate data from your device's <strong>Health Connect</strong> to analyze your sleep quality.</li>
+        <li><strong>Environmental & Habit Data:</strong> The App collects temperature and humidity data via a connected Bluetooth device, as well as manual questionnaire inputs (e.g., caffeine intake, stress levels). This data is stored securely in Firebase Firestore.</li>
+        <li><strong>Device Usage Data (Sleep Estimation):</strong> If wearable data is unavailable, the App may request "Usage Access" to monitor basic device activity (such as screen on/off or lock/unlock events). <strong>We do not track which specific apps you use, your messages, or your browsing history.</strong> This data is strictly used locally to estimate your bedtimes and wake times.</li>
     </ul>
 
-    <h2>2. Why We Need Bluetooth and Location Permissions</h2>
-    <p>The App requires <strong>Bluetooth</strong> permissions to connect to your external thermometer device to track room conditions during your sleep.</p>
-    <p>On Android devices, scanning for Bluetooth devices inherently requires <strong>Location Permission</strong> (specifically <em>ACCESS_FINE_LOCATION</em> or <em>ACCESS_COARSE_LOCATION</em>). <strong>We do NOT track, collect, or store your physical location or GPS data.</strong> The location permission is strictly used to allow the Bluetooth scanning functionality to work properly.</p>
-
-    <h2>3. Background Services & Alarms</h2>
-    <p>The App uses background services and exact alarms (<em>SCHEDULE_EXACT_ALARM</em>) to periodically wake up the app during the night. This is necessary to automatically scan and record temperature data without requiring you to keep the app open.</p>
-
-    <h2>4. Third-Party Services</h2>
-    <p>The App does use third-party services that may collect information used to identify you. We use the following Google services:</p>
+    <h2>2. Permissions Explained</h2>
+    <p>To function correctly, the App requires specific device permissions:</p>
     <ul>
-        <li><strong>Google Play Services:</strong> For Android platform requirements.</li>
-        <li><strong>Firebase (Authentication & Firestore):</strong> To securely store your account details and sleep data.</li>
+        <li><strong>Bluetooth & Location:</strong> Required to connect to your external thermometer device. On Android, scanning for Bluetooth devices inherently requires Location Permission. <em>We do NOT track, collect, or store your physical GPS location.</em></li>
+        <li><strong>Health Connect:</strong> Required to access your biometric sleep data. You maintain full control over what data is shared via the Health Connect settings.</li>
+        <li><strong>Usage Access:</strong> Required solely for the fallback sleep detection algorithm, analyzing device idle times.</li>
+        <li><strong>Notifications:</strong> Required to send you daily morning reminders to log your sleep and check your insights.</li>
     </ul>
-    <p>These services adhere to their own strict privacy policies and security standards.</p>
 
-    <h2>5. Security</h2>
-    <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. All data sent to our database (Firebase) is encrypted in transit.</p>
+    <h2>3. Third-Party Services & AI Integration</h2>
+    <p>The App uses third-party services that may collect information used to identify you, governed by their own strict privacy policies:</p>
+    <ul>
+        <li><strong>Google Play Services & Health Connect:</strong> For Android platform health data synchronization.</li>
+        <li><strong>Firebase (Authentication & Firestore):</strong> To securely authenticate users and store sleep and environmental data.</li>
+        <li><strong>Google Gemini API (Generative AI):</strong> The App uses Artificial Intelligence to provide personalized sleep coaching. To generate these insights, relevant sleep metrics (such as sleep duration, heart rate, and room temperature) are sent to the Gemini API. This data is used strictly for generating your personal advice and is not used to train public models.</li>
+    </ul>
+
+    <h2>4. Background Services & Alarms</h2>
+    <p>The App uses background services and exact alarms to periodically wake up the app during the night. This is necessary to automatically scan and record environmental temperature data without requiring you to keep the app open, ensuring accurate correlations with your sleep stages.</p>
+
+    <h2>5. Security & Data Deletion</h2>
+    <p>We value your trust in providing us your Personal Information, thus we strive to use commercially acceptable means of protecting it. All data sent to our database (Firebase) is encrypted in transit and at rest. You have the right to delete your data at any time. If you wish to delete your account and all associated sleep records, you can do so directly from the App's Profile settings.</p>
 
     <h2>6. Changes to This Privacy Policy</h2>
     <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
